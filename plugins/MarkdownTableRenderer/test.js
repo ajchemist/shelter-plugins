@@ -114,7 +114,7 @@ globalThis.shelter = { plugin: { scoped: { observeDom(sel, cb) { document.queryS
 // --- test ---
 
 const { onLoad, onUnload } = await import(
-    pathToFileURL(join(__dirname, 'plugins/MarkdownTableRenderer/index.js')).href
+    pathToFileURL(join(__dirname, 'index.js')).href
 );
 
 onLoad();

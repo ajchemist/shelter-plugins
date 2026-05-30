@@ -37,7 +37,7 @@ Requirements: [pnpm](https://pnpm.io), Node.js 18+
 pnpm i
 pnpm lune ci          # build → dist/
 pnpm lune ssg ci      # generate site → dist/
-node test-port.js     # smoke test
+node plugins/MarkdownTableRenderer/test.js  # smoke test
 ```
 
 ## Acknowledgements
