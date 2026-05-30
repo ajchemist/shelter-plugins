@@ -2,5 +2,8 @@
 	"devDependencies": {
 		"@uwu/lune": "^1.6.2"
 	},
-	"type": "module"
+	"type": "module",
+	"pnpm": {
+		"onlyBuiltDependencies": ["@parcel/watcher", "esbuild"]
+	}
 }
