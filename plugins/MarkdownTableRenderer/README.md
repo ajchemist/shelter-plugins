@@ -4,8 +4,9 @@ A [Shelter](https://github.com/uwu/shelter) plugin that renders Markdown tables 
 
 ## Before / After
 
-<!-- TODO: add screenshots of a Discord message with and without the plugin -->
-*Screenshots coming soon.*
+| Before | After |
+|--------|-------|
+| ![before](before.png) | ![after](after.png) |
 
 ## Installation
 
