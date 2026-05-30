@@ -36,7 +36,9 @@
       
         <div class="plugin-link" onclick="navigator.clipboard.writeText(this.innerText)">
           <p>
-             https://ajchemist.github.io/shelter-plugins/  <svg
+            
+      <span class="plugin-link-placeholder" data-name="">https://example.com/</span>
+       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="icon"
         viewBox="0 0 24 24"
@@ -61,12 +63,33 @@
        <div class="footer">
         Site built with
         <a href="https://shelter.uwu.network/guides/lune-ssg">Lune 1.6.2</a>
-        at 2026-05-30 16:46:14  on commit b3b0629. 
+        at 2026-05-30 16:53:48  on commit 490fa4c. 
       </div>
       <!-- Hello, friend! You found an easter egg! -- Hazel -->
       
       </div>
     </main>
 
-       </body>
+    
+    <script>
+    {
+      const placeholders = document.getElementsByClassName("plugin-link-placeholder");
+    
+      let href = window.location.href;
+      if (href.endsWith("/")) href = href.slice(0, -1);
+    
+      for (const placeholder of placeholders) {
+        const pluginName = placeholder.dataset.name;
+    
+        if (!pluginName) placeholder.innerText = href;
+        else {
+          let href2 = href;
+          if (href2.endsWith("/" + pluginName)) href2 = href2.slice(0, -pluginName.length);
+    
+          placeholder.innerText = href2 + "/" + pluginName;
+        }
+      }
+    }
+    </script>
+  </body>
 </html>
